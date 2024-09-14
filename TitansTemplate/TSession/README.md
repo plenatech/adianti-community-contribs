@@ -1,9 +1,14 @@
+
 # Alteração em TSession
 
 A alteração deste componente, foi inicialmente documentada em: https://adiantiframework.com.br/forum/view_5828?multiplas-abas-e-carregamento-assincrono-de-pagina
 
 Basicamente a alteração consiste em manter a sessão sempre fechada para escrita e aberta para leitura, de tal modo que não fique bloqueando outras execuções do PHP na mesma sessão, a sessão é reaberta para escrita na mesma execução sempre que TSession for gravar um valor.
 
+## Motivação
+A motivação dessa alteração é poder manter o uso de TSession de forma padrão no Framework contornando o lock de sessão (que é uma característica do PHP e não do FW).
+
+## Arquivos
 O arquivo TSession.php detalha as alterações realizadas.
 
 O diretório framework-7.6-original contém o Framework original.
