@@ -91,7 +91,7 @@ Ajuste o PHP-FPM:
 ```
 vim /etc/php-fpm.d/www.conf
 # No final do arquivo comente as linhas que setam o tipo de sessão, assim serão usadas as opções do php.ini
-# Se usar mais de uma pool do PHP-FPM, você pode ajustar os parâmetros diretamenteo no conf da pool do PHP-FPM.
+# Se usar mais de uma pool do PHP-FPM, você pode ajustar os parâmetros diretamente no conf da pool do PHP-FPM.
 ```
 
 
@@ -115,6 +115,6 @@ Teste sua aplicação e veja se as chaves foram criadas no Redis:
 redis-cli -h 127.0.0.1 -p 6379 -a sua_senha_segura
 # Uma vez dentro da conexão liste as chaves com o comando abaixo:
 SCAN 0
-# Deve econtrar uma saida similar a:
+# Deve encontrar uma saída similar a:
 # PHPREDIS_SESSION:pUFtS,kKwBPfJ0FcW-d0WhhHMLT2-6Q8K1LPYTVa2f9wmIkqUkcm2FThq7tjtgYE
 ```
